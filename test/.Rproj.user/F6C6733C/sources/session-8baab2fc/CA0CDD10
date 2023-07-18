@@ -1,11 +1,11 @@
 {
     "id": "CA0CDD10",
-    "path": null,
-    "project_path": null,
+    "path": "~/Downloads/R/test/one.R",
+    "project_path": "one.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "854740926",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1689656891795.0,
     "source_on_save": false,
     "relative_order": 1,
@@ -17,11 +17,11 @@
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 111559114585939,
-    "encoding": "",
+    "lastKnownWriteTime": 1689657169,
+    "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1689657011954,
+    "last_content_update": 1689657169557,
     "read_only": false,
     "read_only_alternatives": []
 }
