@@ -1,0 +1,62 @@
+---
+title: "Air miles"
+output:
+  html_document: default
+date: "2023-07-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Explore the data
+
+```{r}
+summary(airquality)
+```
+## Structure of the dataset
+```{r,echo=TRUE}
+str(airquality)
+```
+
+## Plot of temperature vs. ozone concentration
+
+```{r airquality, echo=FALSE}
+library(ggplot2)
+ggplot(airquality, aes(x=Temp, y=Ozone)) + 
+    geom_point()
+```
+
+## Correlation between temperature and ozone concentration
+
+```{r,echo=TRUE}
+cor(airquality$Temp, airquality$Ozone)
+```
+
+## 
+
+```{r,echo=FALSE}
+ggplot(airquality, aes(x = Solar.R, y = Ozone)) +
+  geom_point() +
+  labs(x = "Solar Radiation", y = "Ozone", title = "Scatter plot of Solar.R vs. Ozone")
+
+```
+
+
+```{r,echo=TRUE}
+cor_matrix <- cor(airquality[, c("Ozone", "Solar.R", "Wind", "Temp", "Month", "Day")])
+print(cor_matrix)
+```
+
+
+```{r,echo=FALSE}
+library(plotly)
+plot_ly(data = airquality, x = ~Temp, y = ~Ozone, type = "scatter", mode = "markers", 
+             marker = list(size = 10, opacity = 0.8), 
+             xaxis = "Temperature", yaxis = "Ozone",
+             text = paste("Day:", airquality$Day))
+```
+
+
+
+
